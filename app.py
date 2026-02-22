@@ -9,8 +9,12 @@ from system_prompt import SYSTEM_PROMPT
 import tempfile
 import base64
 
-load_dotenv()
-OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
+if "OPENROUTER_API_KEY" in st.secrets:
+    OPENROUTER_API_KEY = st.secrets["OPENROUTER_API_KEY"]
+else:
+    from dotenv import load_dotenv
+    load_dotenv()
+    OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
 
 if not OPENROUTER_API_KEY:
     st.error("OpenRouter API Key not found!")
