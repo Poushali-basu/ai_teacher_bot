@@ -1,7 +1,7 @@
 streamlit
+python-dotenv
 langchain
 langchain-openrouter
-openrouter
-python-dotenv
 langchain-community
+openrouter
 pypdf
