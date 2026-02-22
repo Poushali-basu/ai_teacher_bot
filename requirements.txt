@@ -1,0 +1,7 @@
+streamlit
+langchain
+langchain-openrouter
+openrouter
+python-dotenv
+langchain-community
+pypdf
